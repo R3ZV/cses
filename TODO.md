@@ -10,8 +10,6 @@
 - [ ] Planets Queries I
 - [ ] Planets Queries II
 - [ ] Planets Cycles
-- [ ] Road Reparation
-- [ ] Road Construction
 - [ ] Flight Routes Check
 - [ ] Planets and Kingdoms
 - [ ] Giant Pizza
@@ -21,7 +19,6 @@
 - [ ] Teleporters Path
 - [ ] Hamiltonian Flights
 - [ ] Knight's Tour
-- [ ] Download Speed
 - [ ] Police Chase
 - [ ] School Dance
 - [ ] Distinct Routes
