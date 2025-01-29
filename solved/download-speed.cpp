@@ -19,29 +19,29 @@ public:
         capacity = std::vector<std::vector<i64>>(n, std::vector<i64>(n, 0));
     }
 
+    bool reachable(int source, int sink, std::vector<int> &parent) {
+        std::queue<int> q;
+        q.push(source);
+        while (!q.empty()) {
+            int node = q.front();
+            q.pop();
+            for (int son : adj[node]) {
+                i64 w = capacity[node][son];
+                if (w <= 0 || parent[son] != -1) continue;
+                parent[son] = node;
+                q.push(son);
+            }
+        }
+        return parent[sink] != -1;
+    };
+
     i64 max_flow(int source, int sink) {
         std::vector<int> parent(n, -1);
 
         // path from source to sink
         // no non-negative capacities
-        auto reachable = [&]() -> bool {
-            std::queue<int> q;
-            q.push(source);
-            while (!q.empty()) {
-                int node = q.front();
-                q.pop();
-                for (int son : adj[node]) {
-                    i64 w = capacity[node][son];
-                    if (w <= 0 || parent[son] != -1) continue;
-                    parent[son] = node;
-                    q.push(son);
-                }
-            }
-            return parent[sink] != -1;
-        };
-
-        long long flow = 0;
-        while (reachable()) {
+        i64 flow = 0;
+        while (reachable(source, sink, parent)) {
             i64 curr_flow = LLONG_MAX;
             int node = sink;
             while (node != source) {

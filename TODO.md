@@ -19,7 +19,6 @@
 - [ ] Teleporters Path
 - [ ] Hamiltonian Flights
 - [ ] Knight's Tour
-- [ ] Police Chase
 - [ ] School Dance
 - [ ] Distinct Routes
 
