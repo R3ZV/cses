@@ -19,7 +19,6 @@
 - [ ] Teleporters Path
 - [ ] Hamiltonian Flights
 - [ ] Knight's Tour
-- [ ] School Dance
 - [ ] Distinct Routes
 
 # Trees
